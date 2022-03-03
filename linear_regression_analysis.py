@@ -3,7 +3,8 @@ import pandas as pd
 #import scipy
 import statsmodels.api as sm
 from matplotlib import pyplot as plt
-#import seaborn as sns
+import seaborn as sns
+sns.set()
 #import sklearn
 
 
@@ -12,13 +13,13 @@ filepath = r'C:\Users\970jwillems\OneDrive - Sonova\Admin - Self-Dev\Data Scienc
 data = pd.read_csv(filepath)
 
 
-# Explore data
+# Explore data points
 print(data.describe(), '\n'*2)
 
 y = data['GPA']
 x1 = data['SAT']
 
-plt.scatter(x1,y)
+plt.scatter(x1, y, c="blue")
 plt.xlabel('SAT', fontsize = 20)
 plt.ylabel('GPA', fontsize = 20)
 plt.show(block=False)
@@ -33,10 +34,9 @@ print(f"The slope = {slope}")
 print(f"The intercept = {intercept}")
 
 
-#Explore Regression
-plt.scatter(x1,y)
-y0 = slope * x1  + intercept
-plt.plot(x1, y0, lw=4, c='orange', label='regression line')
+#Explore regression line
+yht = slope * x1  + intercept
+plt.plot(x1, yht, lw=4, c='orange', label='regression line')
 plt.xlabel('SAT', fontsize = 20)
 plt.ylabel('GPA', fontsize = 20)
 plt.show(block=False)

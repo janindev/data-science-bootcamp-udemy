@@ -28,6 +28,8 @@ def Calc():
 
 Calc()
 
+
+
 ###################  v.2.  ###############################
 
 # Define Class MulCalc with Methods
