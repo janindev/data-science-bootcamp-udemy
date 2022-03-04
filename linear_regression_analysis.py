@@ -1,11 +1,9 @@
 import numpy as np
 import pandas as pd
-#import scipy
 import statsmodels.api as sm
 from matplotlib import pyplot as plt
 import seaborn as sns
 sns.set()
-#import sklearn
 
 
 # Load data
